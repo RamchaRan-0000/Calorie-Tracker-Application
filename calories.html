@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="calories.css" />
+  <script src="calories.js"></script>
+</head>
+<body>
+
+<!-- ========== TOAST ========== -->
+<div id="toastBox"></div>
+
+<!-- ========== LANDING PAGE ========== -->
+<div id="landingPage">
+
+  <nav class="nav">
+    <div class="nav-logo">🥗 NutriTrack</div>
+    <div class="nav-btns">
+      <button class="btn-ghost" onclick="showAuth('login')">Login</button>
+      <button class="btn-primary" onclick="showAuth('signup')">Get Started</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="badge">Made for India 🇮🇳</span>
+      <h1>Eat well.<br>Move more.<br><span>Feel great.</span></h1>
+      <p>Track your daily calories, log workouts and watch your progress grow — simply and without stress.</p>
+      <div class="hero-btns">
+        <button class="btn-primary btn-lg" onclick="showAuth('signup')">Start for free</button>
+        <button class="btn-ghost btn-lg" onclick="scrollTo('featuresSection')">Learn more ↓</button>
+      </div>
+    </div>
+    <div class="hero-card-stack">
+      <div class="mini-card">🍛 Biryani · 300 kcal <span class="pill-green">Logged</span></div>
+      <div class="mini-card main-card">
+        <div class="mc-label">Today's Progress</div>
+        <div class="mc-big">1,450 <small>/ 2,000 kcal</small></div>
+        <div class="mini-bar"><div class="mini-bar-fill" style="width:72%"></div></div>
+        <div class="mc-sub">550 kcal remaining</div>
+      </div>
+      <div class="mini-card">🏃 Running 30 min · <span style="color:#f59e0b;">-240 kcal</span></div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip" id="featuresSection">
+    <div class="stat-chip"><strong>50,000+</strong><span>Active Users</span></div>
+    <div class="stat-chip"><strong>2M+</strong><span>Meals Logged</span></div>
+    <div class="stat-chip"><strong>500+</strong><span>Indian Foods</span></div>
+    <div class="stat-chip"><strong>98%</strong><span>Satisfaction</span></div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="features-section">
+    <div class="section-head">
+      <h2>Everything you need to stay on track</h2>
+      <p>Simple tools that actually help you build healthy habits.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon">🍽️</div>
+        <h3>Meal Logging</h3>
+        <p>Choose from popular Indian foods or add your own. Track breakfast, lunch, dinner and snacks.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🔥</div>
+        <h3>Calorie Burner</h3>
+        <p>Log your runs, cycling, gym sessions and see how many calories you burned using proven formulas.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📊</div>
+        <h3>Progress Charts</h3>
+        <p>Visual 7-day charts of your intake and burns so you can clearly see how you're improving.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">📅</div>
+        <h3>Daily History</h3>
+        <p>Every meal and workout is saved and organised by date so nothing is ever lost.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🎯</div>
+        <h3>Personalised Goals</h3>
+        <p>We calculate your ideal calorie goal based on your body stats and activity level.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🇮🇳</div>
+        <h3>Indian Food Database</h3>
+        <p>Dosa, Idli, Biryani, Chapati, Upma — we've got your everyday meals covered.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="section-head">
+      <h2>Up and running in 3 steps</h2>
+    </div>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Create account</h4>
+        <p>Sign up and set your profile — weight, height and activity level.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Log your day</h4>
+        <p>Add every meal and workout as you go through the day.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Track & improve</h4>
+        <p>Check your progress charts and history to stay consistent.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testi-section">
+    <div class="section-head">
+      <h2>People are loving it</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Finally an app with Indian food options! I lost 8 kg in 3 months. The daily charts keep me going."</p>
+        <div class="testi-author"><div class="avatar">P</div><div><b>Priya Sharma</b><br><small>Hyderabad · Lost 8 kg</small></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"I track my morning runs and it perfectly balances my meals. The calorie burner is super accurate."</p>
+        <div class="testi-author"><div class="avatar">R</div><div><b>Rahul Menon</b><br><small>Bangalore · Marathon Runner</small></div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"I've tried 5 other apps but none had Dosa and Upma. This one feels made for us!"</p>
+        <div class="testi-author"><div class="avatar">A</div><div><b>Ananya Reddy</b><br><small>Chennai · Fitness Enthusiast</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to start your journey?</h2>
+    <p>Join 50,000+ people already tracking with NutriTrack.</p>
+    <button class="btn-primary btn-lg" onclick="showAuth('signup')">Create free account →</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo">🥗 NutriTrack</div>
+        <p>Smart calorie tracking built for India. Simple, honest, effective.</p>
+        <p style="margin-top:8px;">📧 hello@nutritrack.in &nbsp;·&nbsp; 📞 +91 98765 43210</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h5>Product</h5>
+          <a href="#">Tracker</a><a href="#">Burner</a><a href="#">Progress</a><a href="#">History</a>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <a href="#">About</a><a href="#">Blog</a><a href="#">Careers</a>
+        </div>
+        <div>
+          <h5>Support</h5>
+          <a href="#">Help</a><a href="#">Privacy</a><a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 NutriTrack · Made with 🌿 in India</div>
+  </footer>
+
+</div><!-- /landingPage -->
+
+
+<!-- ========== AUTH PAGE ========== -->
+<div id="authPage" class="hidden">
+  <div class="auth-page">
+    <div class="auth-left">
+      <div class="nav-logo" style="font-size:22px;margin-bottom:32px;">🥗 NutriTrack</div>
+      <h2>Your daily health<br>companion</h2>
+      <p>Track meals, log workouts and watch your progress every day — designed around Indian food habits.</p>
+      <ul class="auth-perks">
+        <li>✅ 500+ Indian foods preloaded</li>
+        <li>✅ Personalised calorie goals</li>
+        <li>✅ Visual progress charts</li>
+        <li>✅ Free forever</li>
+      </ul>
+    </div>
+    <div class="auth-right">
+
+      <!-- SIGNUP -->
+      <div id="signupBox" class="auth-card">
+        <div class="auth-back" onclick="backToLanding()">← Back</div>
+        <h3>Create account</h3>
+        <p class="auth-sub">Start your health journey today.</p>
+        <label>Full Name</label>
+        <input type="text" id="regName" class="inp" placeholder="e.g. Priya Sharma" />
+        <label>Email</label>
+        <input type="email" id="regEmail" class="inp" placeholder="you@example.com" />
+        <label>Password</label>
+        <input type="password" id="regPass" class="inp" placeholder="Minimum 6 characters" />
+        <button class="btn-primary btn-full" onclick="registerUser()">Create Account →</button>
+        <p class="switch-link">Already have an account? <span onclick="showAuth('login')">Login here</span></p>
+      </div>
+
+      <!-- LOGIN -->
+      <div id="loginBox" class="auth-card hidden">
+        <div class="auth-back" onclick="backToLanding()">← Back</div>
+        <h3>Welcome back 👋</h3>
+        <p class="auth-sub">Good to see you again.</p>
+        <label>Email</label>
+        <input type="email" id="loginEmail" class="inp" placeholder="you@example.com" />
+        <label>Password</label>
+        <input type="password" id="loginPass" class="inp" placeholder="Your password" />
+        <button class="btn-primary btn-full" onclick="loginUser()">Login →</button>
+        <p class="switch-link">New here? <span onclick="showAuth('signup')">Create account</span></p>
+      </div>
+
+      <!-- ONBOARDING -->
+      <div id="onboardBox" class="auth-card hidden">
+        <h3>Set up your profile 🎯</h3>
+        <p class="auth-sub">We'll calculate your ideal calorie goal.</p>
+        <label>Weight (kg)</label>
+        <input type="number" id="obWeight" class="inp" placeholder="e.g. 70" oninput="calcGoal()" />
+        <label>Height (cm)</label>
+        <input type="number" id="obHeight" class="inp" placeholder="e.g. 170" oninput="calcGoal()" />
+        <label>Age</label>
+        <input type="number" id="obAge" class="inp" placeholder="e.g. 25" oninput="calcGoal()" />
+        <label>Gender</label>
+        <select id="obGender" class="inp" onchange="calcGoal()">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <label>Activity Level</label>
+        <select id="obActivity" class="inp" onchange="calcGoal()">
+          <option value="1.2">Sedentary (desk job, no exercise)</option>
+          <option value="1.375">Light (1–3 days/week)</option>
+          <option value="1.55" selected>Moderate (3–5 days/week)</option>
+          <option value="1.725">Active (6–7 days/week)</option>
+          <option value="1.9">Very Active (physical job + gym)</option>
+        </select>
+        <div id="goalPreviewBox" class="goal-preview hidden">
+          Suggested goal: <strong id="goalPreviewNum">—</strong> kcal/day
+        </div>
+        <label>Daily Calorie Goal <small>(or leave blank to use suggested)</small></label>
+        <input type="number" id="obGoal" class="inp" placeholder="e.g. 2000" />
+        <button class="btn-primary btn-full" onclick="completeOnboarding()">Start Tracking →</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== APP PAGE ========== -->
+<div id="appPage" class="hidden">
+
+  <!-- NAVBAR -->
+  <nav class="app-nav">
+    <div class="nav-logo">🥗 NutriTrack</div>
+    <div class="app-nav-tabs" id="desktopTabs">
+      <button class="tab active" id="tab-tracker"  onclick="showSection('trackerPage')">🍽️ Tracker</button>
+      <button class="tab"        id="tab-burner"   onclick="showSection('burnerPage')">🔥 Burner</button>
+      <button class="tab"        id="tab-progress" onclick="showSection('progressPage')">📊 Progress</button>
+      <button class="tab"        id="tab-history"  onclick="showSection('historyPage')">📅 History</button>
+    </div>
+    <div class="app-nav-right">
+      <div class="user-chip"><span id="userInitial">U</span><span id="userFirstName">User</span></div>
+      <button class="btn-danger-sm" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="app-body">
+
+    <!-- TRACKER -->
+    <div id="trackerPage" class="page-section">
+      <div class="page-header">
+        <h2>Daily Tracker</h2>
+        <span id="todayLabel" class="date-label"></span>
+      </div>
+
+      <!-- SUMMARY CARDS -->
+      <div class="summary-row">
+        <div class="sum-card"><div class="sum-icon">🎯</div><div class="sum-val" id="sc-goal">2000</div><div class="sum-label">Goal (kcal)</div></div>
+        <div class="sum-card eaten"><div class="sum-icon">🍽️</div><div class="sum-val" id="sc-eaten">0</div><div class="sum-label">Eaten (kcal)</div></div>
+        <div class="sum-card burned"><div class="sum-icon">🔥</div><div class="sum-val" id="sc-burned">0</div><div class="sum-label">Burned (kcal)</div></div>
+        <div class="sum-card remain"><div class="sum-icon">⚡</div><div class="sum-val" id="sc-remain">2000</div><div class="sum-label">Remaining (kcal)</div></div>
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div class="prog-card">
+        <div class="prog-top"><span>Today's progress</span><span id="progPct">0%</span></div>
+        <div class="prog-track"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+      </div>
+
+      <!-- LOG FORM + TODAY LOG -->
+      <div class="two-col">
+        <div class="card">
+          <h4 class="card-title">Log a Meal</h4>
+          <label class="lbl">Meal Type</label>
+          <select id="mealType" class="inp">
+            <option>Breakfast</option><option>Lunch</option><option>Dinner</option><option>Snack</option>
+          </select>
+          <label class="lbl">Select Food</label>
+          <select id="foodSelect" class="inp">
+            <option value="100">Dosa (100 kcal)</option>
+            <option value="70">Idli (70 kcal)</option>
+            <option value="300">Biryani (300 kcal)</option>
+            <option value="250">Fried Rice (250 kcal)</option>
+            <option value="150">Upma (150 kcal)</option>
+            <option value="120">Poha (120 kcal)</option>
+            <option value="200">Chapati (200 kcal)</option>
+            <option value="220">Paratha (220 kcal)</option>
+            <option value="180">Omelette (180 kcal)</option>
+            <option value="90">Milk — 1 glass (90 kcal)</option>
+            <option value="80">Banana (80 kcal)</option>
+            <option value="350">Butter Chicken (350 kcal)</option>
+            <option value="280">Paneer Curry (280 kcal)</option>
+            <option value="160">Sambar Rice (160 kcal)</option>
+            <option value="60">Curd (60 kcal)</option>
+          </select>
+          <div class="or-divider">— or enter custom —</div>
+          <label class="lbl">Custom Food Name</label>
+          <input type="text" id="foodName" class="inp" placeholder="e.g. Home made dal" />
+          <label class="lbl">Calories per serving</label>
+          <input type="number" id="foodCal" class="inp" placeholder="kcal" />
+          <label class="lbl">Quantity</label>
+          <input type="number" id="foodQty" class="inp" value="1" min="1" />
+          <button class="btn-primary btn-full" style="margin-top:14px;" onclick="addFood()">+ Add Food</button>
+        </div>
+        <div class="card">
+          <h4 class="card-title">Today's Meals</h4>
+          <div id="todayFoodLog" class="log-list">
+            <div class="empty-msg">No meals logged yet today 🍽️</div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /trackerPage -->
+
+    <!-- BURNER -->
+    <div id="burnerPage" class="page-section hidden">
+      <div class="page-header">
+        <h2>Calorie Burner</h2>
+        <span class="date-label">Log your workouts</span>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <h4 class="card-title">Log Exercise</h4>
+          <label class="lbl">Exercise Type</label>
+          <select id="exType" class="inp" onchange="previewBurn()" >
+            <option value="running">🏃 Running (8 MET)</option>
+            <option value="cycling">🚴 Cycling (6 MET)</option>
+            <option value="walking">🚶 Walking (3.5 MET)</option>
+            <option value="swimming">🏊 Swimming (7 MET)</option>
+            <option value="gym">🏋️ Gym / Weights (5 MET)</option>
+            <option value="hiit">⚡ HIIT (9 MET)</option>
+            <option value="yoga">🧘 Yoga (2.5 MET)</option>
+            <option value="cricket">🏏 Cricket (5 MET)</option>
+          </select>
+          <label class="lbl">Duration (minutes)</label>
+          <input type="number" id="exDuration" class="inp" placeholder="e.g. 30" oninput="previewBurn()" />
+          <label class="lbl">Your Weight (kg)</label>
+          <input type="number" id="exWeight" class="inp" placeholder="e.g. 70" oninput="previewBurn()" />
+          <div id="burnPreview" class="burn-preview hidden">
+            Estimated burn: <strong id="burnPreviewNum">—</strong>
+          </div>
+          <button class="btn-primary btn-full" style="margin-top:14px;" onclick="addExercise()">+ Log Exercise</button>
+        </div>
+        <div class="card">
+          <h4 class="card-title">Today's Workouts</h4>
+          <div id="todayExLog" class="log-list">
+            <div class="empty-msg">No workouts logged yet today 🏃</div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /burnerPage -->
+
+    <!-- PROGRESS -->
+    <div id="progressPage" class="page-section hidden">
+      <div class="page-header">
+        <h2>Your Progress</h2>
+        <span class="date-label">7-day overview</span>
+      </div>
+      <div class="summary-row">
+        <div class="sum-card"><div class="sum-icon">🎯</div><div class="sum-val" id="pg-goal">2000</div><div class="sum-label">Today's Goal</div></div>
+        <div class="sum-card eaten"><div class="sum-icon">🍽️</div><div class="sum-val" id="pg-eaten">0</div><div class="sum-label">Eaten Today</div></div>
+        <div class="sum-card burned"><div class="sum-icon">🔥</div><div class="sum-val" id="pg-burned">0</div><div class="sum-label">Burned Today</div></div>
+        <div class="sum-card remain"><div class="sum-icon">⚡</div><div class="sum-val" id="pg-net">0</div><div class="sum-label">Net Calories</div></div>
+      </div>
+      <div class="two-col">
+        <div class="card"><h4 class="card-title">📈 7-Day Intake</h4><div class="chart-box"><canvas id="intakeChart"></canvas></div></div>
+        <div class="card"><h4 class="card-title">🔥 7-Day Burned</h4><div class="chart-box"><canvas id="burnChart"></canvas></div></div>
+      </div>
+      <div class="card" style="margin-top:20px;">
+        <h4 class="card-title">⚖️ Intake vs Burned</h4>
+        <div class="chart-box"><canvas id="compareChart"></canvas></div>
+      </div>
+      <div class="card" style="margin-top:20px;">
+        <h4 class="card-title">🎯 Update Daily Goal</h4>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;">
+          <div style="flex:1;min-width:140px;">
+            <label class="lbl">New Calorie Goal (kcal)</label>
+            <input type="number" id="goalInput" class="inp" placeholder="e.g. 2000" />
+          </div>
+          <button class="btn-primary" style="padding:10px 24px;white-space:nowrap;" onclick="setGoal()">Save Goal</button>
+        </div>
+      </div>
+    </div><!-- /progressPage -->
+
+    <!-- HISTORY -->
+    <div id="historyPage" class="page-section hidden">
+      <div class="page-header" style="justify-content:space-between;flex-wrap:wrap;gap:10px;">
+        <div>
+          <h2>History</h2>
+          <span class="date-label">All your meals and workouts</span>
+        </div>
+        <button class="btn-danger-sm" onclick="clearAll()">🗑️ Clear All Data</button>
+      </div>
+      <div id="historyContent"></div>
+    </div><!-- /historyPage -->
+
+  </div><!-- /app-body -->
+
+  <!-- MOBILE BOTTOM NAV -->
+  <nav class="mobile-nav">
+    <button class="mob-btn active" id="mob-tracker"  onclick="showSection('trackerPage')">🍽️<span>Tracker</span></button>
+    <button class="mob-btn"        id="mob-burner"   onclick="showSection('burnerPage')">🔥<span>Burner</span></button>
+    <button class="mob-btn"        id="mob-progress" onclick="showSection('progressPage')">📊<span>Progress</span></button>
+    <button class="mob-btn"        id="mob-history"  onclick="showSection('historyPage')">📅<span>History</span></button>
+  </nav>
+
+</div><!-- /appPage -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="calorietracker.js"></script>
+</body>
+</html>
